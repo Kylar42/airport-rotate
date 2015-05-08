@@ -1,0 +1,2 @@
+#!/bin/bash
+cat /usr/share/dict/words | grep -i '\([a-z]\)\{8\}' |grep -v -i '\([a-z]\)\{11\}'|head -$((${RANDOM} % `wc -l < /usr/share/dict/words` + 1)) |tail -1|tr -d '\n'|tr '[A-Z]' '[a-z]'
